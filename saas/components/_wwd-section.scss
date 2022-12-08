@@ -1,0 +1,52 @@
+.wwd {
+  display: none;
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
+.wwd {
+  display: block;
+  padding-top: 0px;
+  text-align: center;
+  padding-left: 0px;
+}
+.wwd__header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.wwd__list {
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+}
+.wwd__item {
+  display: inline-block;
+  margin: auto;
+  margin-right: 30px;
+  position: relative;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.wwd__itemoverlay {
+  position: absolute;
+  bottom: 0;
+  background: #2f303acc;
+  color: #fff;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 27px;
+  text-transform: uppercase;
+}
+}

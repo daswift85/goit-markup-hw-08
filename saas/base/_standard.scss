@@ -1,0 +1,51 @@
+:root {
+  --brand-backcolor1: #fff;
+  --brand-backcolor2: #f5f4fa;
+  --brand-backcolor3: #2f303a;
+  --brand-color1: #212121;
+  --brand-color2: #757575;
+  --brand-color3: #2196f3;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: $color-text;
+  background-color: $color-1;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  min-width: 320px;
+max-width: 1200px;
+padding-left: 15px;
+padding-right: 15px;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-device-width: 480px), screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-device-width: 768px), screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+button {
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+// section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
