@@ -3,6 +3,10 @@
   background: var(--brand-backcolor2);
   padding-bottom: 94px;
   padding-top: 94px;
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    padding-bottom: 60px;
+  padding-top: 60px;
+  }
 }
 .about__list {
   margin: auto;
@@ -17,6 +21,9 @@
   @media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
     flex-wrap: nowrap;
     flex-direction: row;
+}
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  margin-top: 30px;
 }
 }
 .about__item {
@@ -37,6 +44,9 @@
   line-height: 1.36;
   letter-spacing: 0.03em;
   text-align: center;
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    font-size: 28px;
+  }
 }
 .about__name {
   font-size: 16px;

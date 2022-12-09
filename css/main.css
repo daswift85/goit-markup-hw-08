@@ -608,8 +608,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media screen and (max-device-width: 767px), screen and (max-width: 767px) {
   .navigation-box {
@@ -695,6 +695,13 @@ button {
   padding: 32px;
   background-color: #FFFFFF;
   z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -759,13 +766,18 @@ button {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-top: 302px;
+  margin-top: auto;
 }
 .mobile-top-contacts li:last-child {
   margin-bottom: 32px;
 }
 
 @media screen and (max-device-width: 479px), screen and (max-width: 479px) {
+  .mobile-top-contacts__icon {
+    display: none;
+  }
+}
+@media screen and (max-device-width: 1199px), screen and (max-width: 1199px) {
   .mobile-top-contacts__icon {
     display: none;
   }
@@ -801,6 +813,9 @@ button {
 }
 .social-top__item:first-child {
   padding-left: 0px;
+}
+.social-top__item:last-child {
+  border-right: none;
 }
 
 .social-top__text {
@@ -920,6 +935,12 @@ button {
   }
 }
 
+@media screen and (min-device-width: 768px) and (max-device-width: 1199px), screen and (min-width: 768px) and (max-width: 1199px) {
+  .top-contacts__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
 .top-contacts__icon-envelope {
   margin-right: 10px;
   vertical-align: middle;
@@ -1000,34 +1021,6 @@ button {
   }
 }
 
-@media screen and (min-device-width: 768px), screen and (min-width: 768px) {
-  .hero-section {
-    padding-top: 139px;
-    padding-bottom: 139px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-768-400-1x.jpg");
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-768-400-1x.jpg");
-  }
-}
-@media screen and (min-device-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 768px) and (min-resolution: 192dpi), screen and (min-device-width: 768px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-768-400-2x.jpg");
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-768-400-2x.jpg");
-  }
-}
-@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
-  .hero-section {
-    padding-top: 239px;
-    padding-bottom: 239px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-1600-600-1x.jpg");
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-1600-600-1x.jpg");
-  }
-}
-@media screen and (min-device-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 1200px) and (min-resolution: 192dpi), screen and (min-device-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-1600-600-2x.jpg");
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-1600-600-2x.jpg");
-  }
-}
 .hero-section__header {
   text-transform: uppercase;
   font-size: 26px;
@@ -1080,9 +1073,43 @@ button {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
+@media screen and (min-device-width: 768px), screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 139px;
+    padding-bottom: 139px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-768-400-1x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-768-400-1x.jpg");
+  }
+}
+@media screen and (min-device-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 768px) and (min-resolution: 192dpi), screen and (min-device-width: 768px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-768-400-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-768-400-2x.jpg");
+  }
+}
+@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-1600-600-1x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-1600-600-1x.jpg");
+  }
+}
+@media screen and (min-device-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-width: 1200px) and (min-resolution: 192dpi), screen and (min-device-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header-img-1600-600-2x.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header-img-1600-600-2x.jpg");
+  }
+}
+@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
+  .hero-section__header {
+    font-size: 44px;
+    line-height: 60px;
+  }
+}
 .features-block {
   padding-top: 94px;
-  margin-bottom: 60px;
+  padding-bottom: 94px;
 }
 
 .features-list {
@@ -1123,11 +1150,17 @@ button {
   text-transform: uppercase;
   margin-top: 30px;
 }
+@media screen and (min-device-width: 768px), screen and (min-width: 768px) {
+  .features-list__header {
+    text-align: left;
+  }
+}
 
 .features-list__text {
   color: var(--brand-color2);
   line-height: 1.71;
   margin-top: 10px;
+  text-align: left;
 }
 
 @media screen and (min-device-width: 768px), screen and (min-width: 768px) {
@@ -1162,6 +1195,12 @@ button {
     max-width: 270px;
   }
 }
+@media screen and (max-device-width: 1199px), screen and (max-width: 1199px) {
+  .features-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .wwd {
   display: none;
 }
@@ -1172,6 +1211,7 @@ button {
     padding-top: 0px;
     text-align: center;
     padding-left: 0px;
+    padding-bottom: 94px;
   }
   .wwd__header {
     font-size: 36px;
@@ -1220,6 +1260,12 @@ button {
   padding-bottom: 94px;
   padding-top: 94px;
 }
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .about {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
 
 .about__list {
   margin: auto;
@@ -1253,6 +1299,11 @@ button {
             flex-direction: row;
   }
 }
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .about__list {
+    margin-top: 30px;
+  }
+}
 
 .about__item {
   width: auto;
@@ -1270,6 +1321,11 @@ button {
   line-height: 1.36;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .about__header {
+    font-size: 28px;
+  }
 }
 
 .about__name {
@@ -1334,6 +1390,12 @@ button {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .clients {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
 
 .clients__header {
   font-size: 36px;
@@ -1341,6 +1403,11 @@ button {
   line-height: 1.36;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .clients__header {
+    font-size: 28px;
+  }
 }
 
 .clients__list {
@@ -1357,6 +1424,11 @@ button {
       flex-wrap: wrap;
   gap: 30px;
   margin-top: 50px;
+}
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .clients__list {
+    margin-top: 30px;
+  }
 }
 
 .clients__link {
@@ -1400,6 +1472,17 @@ button {
     margin-top: 50px;
   }
 }
+@media screen and (max-device-width: 767px), screen and (min-width: 767px) {
+  .clients__item {
+    width: 210px;
+  }
+}
+@media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+  .clients__item {
+    width: 226px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1858,17 +1941,20 @@ address {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    text-align: left;
   }
   .connect-us {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin-top: 0px;
+    text-align: left;
   }
   .mailing-list {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    margin-top: 0px;
   }
   .mailing-list__email {
     -webkit-box-orient: horizontal;

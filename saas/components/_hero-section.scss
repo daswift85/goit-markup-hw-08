@@ -24,38 +24,6 @@
   // }
 }
 
-@media screen and (min-device-width: 768px), screen and (min-width: 768px) {
-  .hero-section {
-    padding-top: 139px;
-    padding-bottom: 139px;
-    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
-      url('../images/Header-img-768-400-1x.jpg');
-      @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
-      url('../images/Header-img-768-400-2x.jpg');
-  }
-}
-}
-
-@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
-  .hero-section {
-    padding-top: 239px;
-    padding-bottom: 239px;
-    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
-      url('../images/Header-img-1600-600-1x.jpg');
-      @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
-      url('../images/Header-img-1600-600-2x.jpg');
-  }
-}
-}
-
 .hero-section__header {
   text-transform: uppercase;
   font-size: 26px;
@@ -100,6 +68,42 @@
     color: var(--brand-backcolor1);
     box-shadow: 0px 4px 4px 0px #00000026;
   }
+}
+
+@media screen and (min-device-width: 768px), screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 139px;
+    padding-bottom: 139px;
+    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
+      url('../images/Header-img-768-400-1x.jpg');
+      @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
+      url('../images/Header-img-768-400-2x.jpg');
+  }
+}
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-width: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
+      url('../images/Header-img-1600-600-1x.jpg');
+      @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to bottom, #2f303a66, #2f303a66),
+      url('../images/Header-img-1600-600-2x.jpg');
+  }
+}
+.hero-section__header {
+  font-size: 44px;
+  line-height: 60px;
+}
 }
 
 // @media screen and (min-device-width: 768px), screen and (min-width: 768px) {

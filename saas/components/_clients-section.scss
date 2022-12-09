@@ -1,6 +1,10 @@
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    padding-bottom: 60px;
+  padding-top: 60px;
+  }
 }
 .clients__header {
   font-size: 36px;
@@ -8,6 +12,10 @@
   line-height: 1.36;
   letter-spacing: 0.03em;
   text-align: center;
+
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    font-size: 28px;
+  }
 }
 .clients__list {
   display: flex;
@@ -16,6 +24,9 @@
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 50px;
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    margin-top: 30px;
+  }
 }
 .clients__link {
   padding: 16px 32px 16px 32px;
@@ -48,4 +59,13 @@
     gap: 30px;
     margin-top: 50px;
   }
+}
+
+.clients__item {
+  @media screen and (max-device-width: 767px), screen and (min-width: 767px) {
+width: 210px;
+  }
+  @media screen and (max-device-width: 1199px), screen and (min-width: 1199px) {
+    width: 226px;
+      }
 }

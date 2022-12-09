@@ -175,13 +175,16 @@ address {
   }
   .adr-items {
     width: fit-content;
+    text-align: left;
   }
   .connect-us {
     width: fit-content;
     margin-top: 0px;
+    text-align: left;
   }
   .mailing-list {
     width: fit-content;
+    margin-top: 0px;
   }
   .mailing-list__email {
     flex-direction: row;
